@@ -1,0 +1,12 @@
+Place your project images here:
+
+- voice-assistant.jpg (800x600px) - Voice Assistant project screenshot
+- queue-management.jpg (800x600px) - Queue Management System screenshot
+- farm-system.jpg (800x600px) - Farm Management System screenshot
+- blog-portal.jpg (800x600px) - CoNexus Blog Portal screenshot
+- employee-management.jpg (800x600px) - Employee Management System screenshot
+- medical-chatbot.jpg (800x600px) - Medical ChatBot screenshot
+
+These can be used for project galleries or detailed project pages.
+Recommended formats: JPG or PNG
+Use high-quality screenshots that showcase your work.

@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balasuriya Periyasamy</title>
+  <meta name="description"
+    content="Balasuriya Periyasamy — Software Engineer | Full Stack Developer | AI Enthusiast. Portfolio with projects, skills, and contact." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="author" content="Balasuriya Periyasamy" />
+  <meta name="robots" content="index,follow" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", "Arial", "sans-serif"] },
+          colors: {
+            brand: {
+              50: '#ecfeff', 100: '#cffafe', 200: '#a5f3fc', 300: '#67e8f9', 400: '#22d3ee', 500: '#06b6d4', 600: '#0891b2', 700: '#0e7490', 800: '#155e75', 900: '#164e63'
+            }
+          },
+          boxShadow: { glow: '0 0 40px rgba(34, 211, 238, 0.35)' }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-RXf+QSDCUQs6Q0QvQ4cNf0j7g0vJ6mH2N1n5nq8nZr2v4F4qk6wqOQw2k9k3ZCkzqvWcHn0eY0+evxwJ3rYxug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body
+  class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-200 font-sans antialiased selection:bg-brand-300 selection:text-slate-900">
+  <div id="tsparticles" class="fixed inset-0 -z-10"></div>
+
+  <div id="success-notification" class="fixed top-20 right-4 z-[60] hidden">
+    <div class="bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg flex items-center space-x-3 max-w-sm">
+      <div class="flex-shrink-0">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </div>
+      <div class="flex-1">
+        <p class="font-medium">Message Sent!</p>
+        <p class="text-sm opacity-90">I'll get back to you soon.</p>
+      </div>
+      <button id="close-notification" class="flex-shrink-0 ml-2 text-white hover:text-gray-200">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <header
+    class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-900/60 border-b border-slate-200/60 dark:border-slate-700/60">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2 group">
+        <span
+          class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-400 to-brand-600 text-white shadow-glow">BP</span>
+        <span
+          class="font-semibold tracking-tight group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Balasuriya
+          Periyasamy</span>
+      </a>
+      <button id="nav-toggle"
+        class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul id="nav-links" class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#education">Education</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#certificates">Certificates</a></li>
+        <li>
+          <a href="#contact" class="support-button">
+            <i class="fa-solid fa-heart"></i>
+            <span>Contact Us</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mobile-menu"
+      class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur">
+      <ul class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-2 gap-3 text-sm">
+        <li><a class="mobile-link" href="#home">Home</a></li>
+        <li><a class="mobile-link" href="#about">About</a></li>
+        <li><a class="mobile-link" href="#skills">Skills</a></li>
+        <li><a class="mobile-link" href="#education">Education</a></li>
+        <li><a class="mobile-link" href="#experience">Experience</a></li>
+        <li><a class="mobile-link" href="#projects">Projects</a></li>
+        <li><a class="mobile-link" href="#certificates">Certificates</a></li>
+        <li>
+          <a href="#contact" class="mobile-support-button">
+            <i class="fa-solid fa-heart"></i>
+            <span>Contact Us</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="home" class="relative overflow-hidden">
+    <div class="page-bg"></div>
+    <div class="absolute inset-0 -z-10">
+      <div class="h-full w-full bg-center bg-cover" style="background-image:url('assets/images/profile/hero-bg.jpg');">
+      </div>
+      <div class="absolute inset-0 bg-white/70 dark:bg-slate-900/70"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-transparent via-white/60 to-white dark:via-slate-900/60 dark:to-slate-900">
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
+      <div class="hero-card card" data-aos="zoom-in">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <p class="uppercase tracking-widest text-brand-600 dark:text-brand-300 text-xs mb-3">Welcome</p>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+              I'm <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-brand-300">Balasuriya</span>
+            </h1>
+            <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">Aspiring on <span id="typing"
+                class="font-semibold"></span></p>
+            <p class="mt-6 text-slate-600 dark:text-slate-300 max-w-2xl">I design and build smart, seamless, and
+              powerful digital solutions transforming ideas into modern, scalable, and intelligent experiences.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#contact" class="btn-primary">Contact Me</a>
+              <a href="#projects" class="btn-secondary">View Projects</a>
+            </div>
+            <div class="mt-6 flex items-center gap-3 home-social">
+              <a class="icon-btn"
+                href="https://www.linkedin.com/in/balasuriya-p-5bb0b92a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a class="icon-btn" href="https://github.com/BALASURIYA-PERIYASAMY" aria-label="GitHub"><i
+                  class="fa-brands fa-github"></i></a>
+              <a class="icon-btn" href="https://www.instagram.com/itz_me_prince_bala?igsh=N2xpdHJuMzVjb3Ny"
+                aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a class="icon-btn" href="https://x.com/MibalaSuriya?t=yne2-qW8BqshTwZ9t8Y8lQ&s=09"
+                aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a class="icon-btn" href="https://balasuriya-coding-diary.blogspot.com/?m=1" aria-label="Blogger"><i
+                  class="fa-brands fa-blogger-b"></i></a>
+            </div>
+
+          </div>
+          <div class="relative flex items-center justify-center" data-aos="fade-left" data-aos-delay="100">
+            <div class="hex-wrap">
+              <div class="hex-glow"></div>
+              <div class="hex-mask">
+                <img src="assets/images/profile/profile.jpg" alt="Profile" class="hex-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>The Person Behind the Work</p>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-8 items-start" data-aos="fade-up" data-aos-delay="100">
+        <div class="lg:col-span-1">
+          <div class="relative w-full flex items-start justify-center">
+            <img src="assets/images/profile/profile1.jpg" alt="Balasuriya"
+              class="rounded-2xl shadow-lg ring-1 ring-slate-200/60 dark:ring-slate-800/80 w-48 sm:w-56 md:w-64 h-auto object-cover" />
+            <div
+              class="absolute -bottom-4 -right-2 sm:-bottom-5 sm:-right-3 card px-4 py-3 flex items-center gap-3 shadow-md">
+              <div
+                class="h-10 w-10 rounded-full bg-gradient-to-br from-brand-500 to-brand-400 text-white grid place-items-center font-extrabold text-lg">
+                2+</div>
+              <div class="leading-tight">
+                <div class="text-sm font-semibold">Internships</div>
+                <div class="text-[11px] text-slate-400">Hands-on experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-2">
+          <div class="prose prose-slate dark:prose-invert">
+            <p>
+              I'm a passionate developer who loves solving real-world problems with code. From building intelligent
+              AI-powered systems to crafting modern full-stack web apps, I strive to create impactful digital solutions.
+              My strength lies in continuous learning, adapting to new technologies, and delivering high-quality
+              results.
+            </p>
+            <p>
+              With expertise in Python, Java, and modern frameworks like React and Django, I specialize in
+              creating scalable web applications and AI-powered solutions. I've successfully delivered projects ranging
+              from voice assistants and queue management systems to medical chatbots and employee management platforms.
+            </p>
+            <p>
+              I enjoy turning complex ideas into elegant, scalable products with delightful user experiences. My
+              approach combines technical excellence with creative problem-solving to deliver solutions that make a real
+              difference.
+            </p>
+          </div>
+
+          <div class="mt-6 flex gap-3">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#contact" class="btn-secondary">Hire Me</a>
+            <a href="assets/resume/Balasuriya_Resume.pdf" download class="btn-secondary">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-300">Skills & Abilities</h2>
+        <p>Technologies I work with</p>
+      </div>
+
+      <div class="skills-grid-enhanced" data-aos="fade-up" data-aos-delay="100">
+        <!-- Programming Languages -->
+        <div class="skill-card-enhanced" data-aos="zoom-in">
+          <div class="skill-icon">
+            <i class="fa-brands fa-python text-4xl text-blue-500"></i>
+          </div>
+          <h3 class="skill-name">Python</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="50">
+          <div class="skill-icon">
+            <i class="fa-brands fa-java text-4xl text-red-500"></i>
+          </div>
+          <h3 class="skill-name">Java</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon">
+            <i class="fa-solid fa-code text-4xl text-gray-600"></i>
+          </div>
+          <h3 class="skill-name">C</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="150">
+          <div class="skill-icon">
+            <i class="fa-solid fa-database text-4xl text-blue-600"></i>
+          </div>
+          <h3 class="skill-name">SQL</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="200">
+          <div class="skill-icon">
+            <i class="fa-brands fa-html5 text-4xl text-orange-500"></i>
+          </div>
+          <h3 class="skill-name">HTML5</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="250">
+          <div class="skill-icon">
+            <i class="fa-brands fa-css3-alt text-4xl text-blue-600"></i>
+          </div>
+          <h3 class="skill-name">CSS3</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="300">
+          <div class="skill-icon">
+            <i class="fa-brands fa-js text-4xl text-yellow-400"></i>
+          </div>
+          <h3 class="skill-name">JavaScript</h3>
+        </div>
+
+        <!-- Frameworks & Libraries -->
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="350">
+          <div class="skill-icon">
+            <i class="fa-brands fa-react text-4xl text-blue-400"></i>
+          </div>
+          <h3 class="skill-name">React</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="400">
+          <div class="skill-icon">
+            <i class="fa-brands fa-angular text-4xl text-red-600"></i>
+          </div>
+          <h3 class="skill-name">Angular</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="450">
+          <div class="skill-icon">
+            <i class="fa-brands fa-bootstrap text-4xl text-purple-600"></i>
+          </div>
+          <h3 class="skill-name">Bootstrap</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="500">
+          <div class="skill-icon">
+            <i class="fa-solid fa-wind text-4xl text-cyan-500"></i>
+          </div>
+          <h3 class="skill-name">Tailwind</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="550">
+          <div class="skill-icon">
+            <i class="fa-solid fa-flask text-4xl text-gray-500"></i>
+          </div>
+          <h3 class="skill-name">Flask</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="600">
+          <div class="skill-icon">
+            <i class="fa-solid fa-leaf text-4xl text-green-600"></i>
+          </div>
+          <h3 class="skill-name">Django</h3>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="650">
+          <div class="skill-icon">
+            <i class="fa-brands fa-android text-4xl text-green-500"></i>
+          </div>
+          <h3 class="skill-name">Android</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="700">
+          <i class="fa-solid fa-code-branch text-4xl text-blue-600"></i>
+          <h3 class="skill-name">NetBeans</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="750">
+          <div class="skill-icon">
+            <i class="fa-solid fa-code text-4xl text-blue-500"></i>
+          </div>
+          <h3 class="skill-name">VS Code</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="800">
+          <div class="skill-icon">
+            <i class="fa-solid fa-jet-fighter text-4xl text-blue-600"></i>
+          </div>
+          <h3 class="skill-name">PyCharm</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="850">
+          <div class="skill-icon">
+            <i class="fa-brands fa-figma text-4xl text-purple-500"></i>
+          </div>
+          <h3 class="skill-name">Figma</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="900">
+          <div class="skill-icon">
+            <i class="fa-solid fa-database text-4xl text-orange-500"></i>
+          </div>
+          <h3 class="skill-name">Xampp/Wamp</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="950">
+          <div class="skill-icon">
+            <i class="fa-solid fa-leaf text-4xl text-green-500"></i>
+          </div>
+          <h3 class="skill-name">MongoDB</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="1000">
+          <div class="skill-icon">
+            <i class="fa-brands fa-github text-4xl text-gray-800 dark:text-gray-200"></i>
+          </div>
+          <h3 class="skill-name">GitHub</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="1050">
+          <div class="skill-icon">
+            <i class="fa-solid fa-database text-4xl text-blue-600"></i>
+          </div>
+          <h3 class="skill-name">WorkBench</h3>
+        </div>
+
+        <!-- Office & Creative Tools -->
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="1100">
+          <div class="skill-icon">
+            <i class="fa-solid fa-file-word text-4xl text-blue-600"></i>
+          </div>
+          <h3 class="skill-name">Word</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="1150">
+          <div class="skill-icon">
+            <i class="fa-solid fa-file-excel text-4xl text-green-600"></i>
+          </div>
+          <h3 class="skill-name">Excel</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="1200">
+          <div class="skill-icon">
+            <i class="fa-solid fa-file-powerpoint text-4xl text-orange-600"></i>
+          </div>
+          <h3 class="skill-name">PowerPoint</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="1250">
+          <div class="skill-icon">
+            <i class="fa-solid fa-image text-4xl text-blue-600"></i>
+          </div>
+          <h3 class="skill-name">Photoshop</h3>
+        </div>
+
+        <div class="skill-card-enhanced" data-aos="zoom-in" data-aos-delay="1300">
+          <div class="skill-icon">
+            <i class="fa-solid fa-video text-4xl text-purple-600"></i>
+          </div>
+          <h3 class="skill-name">Premiere Pro</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">My Education</h2>
+        <p>My academic journey</p>
+      </div>
+
+      <div class="education-timeline" data-aos="fade-up" data-aos-delay="100">
+        <div class="timeline-connector"></div>
+
+        <div class="timeline-dot timeline-dot-1"></div>
+        <div class="timeline-dot timeline-dot-2"></div>
+        <div class="timeline-dot timeline-dot-3"></div>
+
+        <div class="education-card education-card-1" data-aos="fade-right">
+          <div class="education-icon">
+            <i class="fa-solid fa-graduation-cap text-3xl text-blue-400"></i>
+          </div>
+          <div class="education-content">
+            <h3 class="education-title">B.E. Computer Science and Engineering</h3>
+            <p class="education-subtitle">Selvam College of Technology</p>
+            <p class="education-desc">Bachelor's degree in Computer Science and Enginerring with focus on software
+              development,
+              algorithms, and system design.</p>
+            <p class="education-subtitle">2022 - Present</p>
+            <div class="education-timing">
+              <span class="timing-tag">CGPA: 8.078</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="education-card education-card-2" data-aos="fade-left" data-aos-delay="100">
+          <div class="education-icon">
+            <i class="fa-solid fa-book text-3xl text-green-400"></i>
+          </div>
+          <div class="education-content">
+            <h3 class="education-title">HSC (12th)</h3>
+            <p class="education-subtitle">Government Higher Secondary School, Kavakkarapatti</p>
+            <p class="education-desc">Completed higher secondary education with focus on science and mathematics.</p>
+            <p class="education-subtitle">2021 - 2022</p>
+            <div class="education-timing">
+              <span class="timing-tag">Score: 76.28%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="education-card education-card-3" data-aos="fade-right" data-aos-delay="200">
+          <div class="education-icon">
+            <i class="fa-solid fa-school text-3xl text-purple-400"></i>
+          </div>
+          <div class="education-content">
+            <h3 class="education-title">SSLC (10th)</h3>
+            <p class="education-subtitle">Government Higher Secondary School, Kavakkarapatti</p>
+            <p class="education-desc">Completed secondary education with strong foundation in core subjects.</p>
+            <p class="education-subtitle">2019 - 2020</p>
+            <div class="education-timing">
+              <span class="timing-tag">Score: 74.69%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">My Experiences</h2>
+        <p>Internships & hands-on training</p>
+      </div>
+
+      <div class="experience-list space-y-6">
+        <article class="experience-card" data-aos="fade-up">
+          <div class="exp-header">
+            <div class="exp-logo">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div>
+              <h3 class="exp-company">RTech Solution</h3>
+              <p class="exp-meta"><span class="exp-role">Python Full Stack Developer</span> • <span
+                  class="exp-duration">May 2025 – Jun 2025</span></p>
+            </div>
+          </div>
+          <ul class="exp-points">
+            <li>Developed CRUD dashboards, integrated SQLite/MongoDB, and automated workflows.</li>
+            <li>Implemented CI basics and maintained scalable, modular code structure.</li>
+            <li>Improved team delivery using clean Git branching and code reviews.</li>
+          </ul>
+          <img class="exp-avatar" src="assets/images/certificates/rtech-certificate.jpg"
+            alt="RTech Solution Certificate" />
+        </article>
+
+        <article class="experience-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="exp-header">
+            <div class="exp-logo">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <div>
+              <h3 class="exp-company">Training Trains</h3>
+              <p class="exp-meta"><span class="exp-role">Full Stack Developer</span> • <span class="exp-duration">Dec
+                  2024 – Jan 2025</span></p>
+            </div>
+          </div>
+          <ul class="exp-points">
+            <li>Built REST APIs (Django/Flask) with JWT authentication and role-based access.</li>
+            <li>Crafted responsive UIs with Tailwind/Bootstrap and accessibility best practices.</li>
+            <li>Deployed sample apps and collaborated in agile sprints with version control.</li>
+          </ul>
+          <img class="exp-avatar" src="assets/images/certificates/TrainingTrains.jpg"
+            alt="Training Trains Certificate" />
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">My Projects</h2>
+        <p>Some of my recent work</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1: Virtual Queue Management System -->
+        <div class="project-card-enhanced" data-aos="zoom-in">
+          <div class="project-icon">
+            <i class="fa-solid fa-clock text-4xl text-gray-600"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Virtual Queue Management System</h3>
+            <p class="project-desc">A smart solution for managing queues digitally to reduce waiting time and improve
+              efficiency.</p>
+            <div class="project-features">
+              <span class="feature-tag">Real-time Updates</span>
+              <span class="feature-tag">Mobile Friendly</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="" aria-label="Demo" class="project-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <a href="https://github.com/BALASURIYA-PERIYASAMY/virtual-queue-app" aria-label="GitHub"
+              class="project-link"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 2: Transport Log Entry -->
+        <div class="project-card-enhanced" data-aos="zoom-in" data-aos-delay="50">
+          <div class="project-icon">
+            <i class="fa-solid fa-truck text-4xl text-blue-600"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Transport Log System</h3>
+            <p class="project-desc">A digital system to manage and record transport logs for better tracking and
+              transparency.</p>
+            <div class="project-features">
+              <span class="feature-tag">Automatic Entry</span>
+              <span class="feature-tag">By Barcode</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="" aria-label="Demo" class="project-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <a href="https://github.com/BALASURIYA-PERIYASAMY/" aria-label="GitHub" class="project-link"><i
+                class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 3: Farm Management System -->
+        <div class="project-card-enhanced" data-aos="zoom-in" data-aos-delay="100">
+          <div class="project-icon">
+            <i class="fa-solid fa-seedling text-4xl text-green-600"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Cattle Farm Management System</h3>
+            <p class="project-desc">Helps farmers, veterinarians, and farm managers efficiently manage their livestock.
+            </p>
+            <div class="project-features">
+              <span class="feature-tag">Livestock Monitoring</span>
+              <span class="feature-tag">Resource Management</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="" aria-label="Demo" class="project-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <a href="https://github.com/BALASURIYA-PERIYASAMY/" aria-label="GitHub" class="project-link"><i
+                class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 4: Varstrem -->
+        <div class="project-card-enhanced" data-aos="zoom-in" data-aos-delay="150">
+          <div class="project-icon">
+            <i class="fa-solid fa-stream text-4xl text-purple-600"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Varstrem</h3>
+            <p class="project-desc">An innovative new programming language by simple English knowledge.</p>
+            <div class="project-features">
+              <span class="feature-tag">Programming language</span>
+              <span class="feature-tag">Include Libraries</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="" aria-label="Demo" class="project-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <a href="https://github.com/BALASURIYA-PERIYASAMY/" aria-label="GitHub" class="project-link"><i
+                class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 5: Prince Voice Assistant -->
+        <div class="project-card-enhanced" data-aos="zoom-in" data-aos-delay="200">
+          <div class="project-icon">
+            <i class="fa-solid fa-microphone text-4xl text-red-600"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Prince Voice Assistant</h3>
+            <p class="project-desc">An AI-powered personal assistant with voice recognition, reminders, and smart
+              interactions.</p>
+            <div class="project-features">
+              <span class="feature-tag">Voice Recognition</span>
+              <span class="feature-tag">AI Powered</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="" aria-label="Demo" class="project-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <a href="https://github.com/BALASURIYA-PERIYASAMY/Voice-Assistant" aria-label="GitHub"
+              class="project-link"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 6: CoNexus Blog Portal -->
+        <div class="project-card-enhanced" data-aos="zoom-in" data-aos-delay="250">
+          <div class="project-icon">
+            <i class="fa-solid fa-blog text-4xl text-orange-600"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">CoNexus – Blog Portal</h3>
+            <p class="project-desc">A platform for students to share and manage blogs with community features.</p>
+            <div class="project-features">
+              <span class="feature-tag">Community</span>
+              <span class="feature-tag">Daily Diary</span>
+              <span class="feature-tag">Content Management</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="" aria-label="Demo" class="project-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <a href="https://github.com/BALASURIYA-PERIYASAMY/CoNexus-" aria-label="GitHub" class="project-link"><i
+                class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 7: Employee Management System -->
+        <div class="project-card-enhanced" data-aos="zoom-in" data-aos-delay="300">
+          <div class="project-icon">
+            <i class="fa-solid fa-users text-4xl text-indigo-600"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Employee Management System</h3>
+            <p class="project-desc">Tracks employee details, attendance, and performance in an organization.</p>
+            <div class="project-features">
+              <span class="feature-tag">HR Management</span>
+              <span class="feature-tag">Performance Tracking</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="" aria-label="Demo" class="project-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <a href="https://github.com/BALASURIYA-PERIYASAMY/employee_management_system" aria-label="GitHub"
+              class="project-link"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 8: Medical ChatBot -->
+        <div class="project-card-enhanced" data-aos="zoom-in" data-aos-delay="350">
+          <div class="project-icon">
+            <i class="fa-solid fa-robot text-4xl text-teal-600"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Medical ChatBot</h3>
+            <p class="project-desc">An AI chatbot that provides medical guidance and medicine information.</p>
+            <div class="project-features">
+              <span class="feature-tag">AI Medical</span>
+              <span class="feature-tag">Chatbot</span>
+              <span class="feature-tag">24/7 Support</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="" aria-label="Demo" class="project-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <a href="https://github.com/BALASURIYA-PERIYASAMY/medical-chatbot" aria-label="GitHub"
+              class="project-link"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 9: Note Sharing Site -->
+        <div class="project-card-enhanced" data-aos="zoom-in" data-aos-delay="350">
+          <div class="project-icon">
+            <i class="fa-solid fa-book-open text-4xl text-indigo-600"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Note Sharing Site</h3>
+            <p class="project-desc">An online platform for students to upload, share, and access subject-wise notes
+              easily.</p>
+            <div class="project-features">
+              <span class="feature-tag">File Upload</span>
+              <span class="feature-tag">Easy Access</span>
+              <span class="feature-tag">Student Friendly</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="" aria-label="Demo" class="project-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <a href="https://github.com/BALASURIYA-PERIYASAMY/notes-shares" aria-label="GitHub" class="project-link"><i
+                class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Certificate and
+          Achievements</h2>
+        <p>Here are my few certificates and achievements :)</p>
+      </div>
+
+      <div class="certificates-grid-new" data-aos="fade-up" data-aos-delay="100">
+        <!-- Certificate 1 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="100">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate1.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Email Writing Skill</h4>
+              <p class="participation">Participation Certificate</p>
+            </div>
+            <a href="assets/images/certificates/certificate1.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Full Certificate
+            </a>
+          </div>
+        </div>
+
+
+
+        <!-- Certificate 2 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="100">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate2.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Canva Design</h4>
+              <p class="participation">Completion Certificate</p>
+            </div>
+            <a href="assets/images/certificates/certificate2.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Full Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="100">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate3.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Iot Workshop</h4>
+              <p class="participation">Participation Certificate</p>
+            </div>
+            <a href="assets/images/certificates/certificate3.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Full Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 4 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="100">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate4.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Deep learning Workshop</h4>
+              <p class="participation">Participation Certificate</p>
+            </div>
+            <a href="assets/images/certificates/certificate4.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Full Certificate
+            </a>
+          </div>
+        </div>
+
+
+        <!-- Certificate 5 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="100">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate5.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">UI/UX Design Event</h4>
+              <p class="participation">Participation Certificate</p>
+            </div>
+            <a href="assets/images/certificates/certificate5.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Full Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 6 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="100">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/Certificate6.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Python Full Stack Development Workshop</h4>
+              <p class="participation">Participation Certificate</p>
+            </div>
+            <a href="assets/images/certificates/Certificate6.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Full Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 7 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="100">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate7.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Speach competition
+                <p class="participation">Participation Certificate</p>
+            </div>
+            <a href="assets/images/certificates/certificate7.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 8 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="150">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate8.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Paper presentation</h4>
+              <p class="participation">Participation Certificate</p>
+            </div>
+            <a href="assets/images/certificates/certificate8.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 9 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="200">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate9.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">3D Game Design Workshop</h4>
+              <p class="participation">Participation Certificate</p>
+            </div>
+            <a href="assets/images/certificates/certificate9.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 10 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="250">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate10.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Project presentation</h4>
+              <p class="participation">First Prize</p>
+            </div>
+            <a href="assets/images/certificates/certificate10.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 11 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="300">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate11.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Project Presentation</h4>
+              <p class="participation">Second Prize</p>
+            </div>
+            <a href="assets/images/certificates/certificate11.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 12 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="350">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate12.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Training Cource</h4>
+              <p class="participation">Completion</p>
+            </div>
+            <a href="assets/images/certificates/certificate12.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 13 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="400">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate13.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">AI Bootcamp</h4>
+              <p class="participation">Attend</p>
+            </div>
+            <a href="assets/images/certificates/certificate13.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 14 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="450">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate14.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Iot With AI</h4>
+              <p class="participation">Attend</p>
+            </div>
+            <a href="assets/images/certificates/certificate14.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 15 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="500">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate15.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Full Stack Development Workshop</h4>
+              <p class="participation">Participation</p>
+            </div>
+            <a href="assets/images/certificates/certificate15.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 16 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="550">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate16.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Iot Bootcamp</h4>
+              <p class="participation">Attened</p>
+            </div>
+            <a href="assets/images/certificates/certificate16.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 17 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="600">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate17.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Build Wikipedia Using JS</h4>
+              <p class="participation">Participation</p>
+            </div>
+            <a href="assets/images/certificates/certificate17.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 18 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="650">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate18.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Paper Presentation</h4>
+              <p class="participation">presentation</p>
+            </div>
+            <a href="assets/images/certificates/certificate18.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 19 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="700">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate19.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Paper presentation</h4>
+              <p class="participation">Participation</p>
+            </div>
+            <a href="assets/images/certificates/certificate19.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 20 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="750">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate20.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Paper Presentation</h4>
+              <p class="participation">Participation</p>
+            </div>
+            <a href="assets/images/certificates/certificate20.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 21 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="800">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate21.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Artificial Inteligence Workshop</h4>
+              <p class="participation">Participation</p>
+            </div>
+            <a href="assets/images/certificates/certificate21.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 22 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="850">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate22.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Ethical Hacking-web Workshop</h4>
+              <p class="participation">Participation</p>
+            </div>
+            <a href="assets/images/certificates/certificate22.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 23 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="900">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate23.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Training Cource</h4>
+              <p class="participation">Excelent</p>
+            </div>
+            <a href="assets/images/certificates/certificate23.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 24 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="950">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/certificate24.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Training Cource</h4>
+              <p class="participation">Excelent</p>
+            </div>
+            <a href="assets/images/certificates/certificate24.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 25 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="100">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/Certificate25.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Training Cource</h4>
+              <p class="participation">First Prize</p>
+            </div>
+            <a href="assets/images/certificates/certificate25.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+        <!-- Certificate 26 -->
+        <div class="certificate-container" data-aos="zoom-in" data-aos-delay="100">
+          <div class="certificate-paper">
+            <img src="assets/images/certificates/Certificate26.jpg" alt="Certificate" class="certificate-img">
+          </div>
+          <div class="certificate-overlay">
+            <div class="certificate-details">
+              <h4 class="event-name">Government IMPACT-2019</h4>
+              <p class="participation">Participation</p>
+            </div>
+            <a href="assets/images/certificates/certificate26.jpg" target="_blank" class="certificate-view-btn">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Contact us</h2>
+        <p>Let’s work together</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        <form id="contact-form" class="card" data-aos="fade-right">
+          <input type="hidden" name="_subject" value="New Contact Form Message from Portfolio">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="">
+          <input type="hidden" name="_template" value="table">
+
+          <div class="grid grid-cols-1 gap-4">
+            <div>
+              <label class="label" for="name">Name</label>
+              <input id="name" name="name" type="text" required class="input" placeholder="Your name" />
+            </div>
+            <div>
+              <label class="label" for="email">Email</label>
+              <input id="email" name="email" type="email" required class="input" placeholder="you@example.com" />
+            </div>
+            <div>
+              <label class="label" for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required class="input"
+                placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full">Send Message</button>
+          </div>
+        </form>
+
+        <div class="card space-y-6 p-6 rounded-2xl shadow-md bg-white dark:bg-gray-900" data-aos="fade-left">
+          <!-- Section Title -->
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Details</h3>
+
+          <!-- Contact Details -->
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-blue-500"></i>
+              <span class="text-gray-700 dark:text-gray-300">+91 63748 88248</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-red-500"></i>
+              <span class="text-gray-700 dark:text-gray-300">balasuriyaperiyasamy@gmail.com</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-location-dot text-green-500"></i>
+              <span class="text-gray-700 dark:text-gray-300">Namakkal, Tamilnadu, India</span>
+            </div>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31315.800033657993!2d78.27505545041345!3d11.15242330288746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babb57e617b9675%3A0x9c73610f61b95d87!2sErumapatti%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1757843692333!5m2!1sen!2sin"
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-sm mt-6">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-enhanced">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <a href="#" class="text-2xl text-primary" style="font-family: 'Pacifico', cursive;">Balasuriya</a>
+            <p class="footer-desc">Grateful for your visit — stay connected with me on socials.
+            </p>
+            <p class="footer-cta">Keep Rising 🚀 →Connect instantly via Social Media!</p>
+            <button class="chat-button" aria-label="Live Chat">
+              <i class="fa-solid fa-comments"></i>
+            </button>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#home"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+              <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+              <li><a href="#skills"><i class="fa-solid fa-chevron-right"></i> Skills</a></li>
+              <li><a href="#education"><i class="fa-solid fa-chevron-right"></i> Education</a></li>
+              <li><a href="#experience"><i class="fa-solid fa-chevron-right"></i> Experience</a></li>
+              <li><a href="#projects"><i class="fa-solid fa-chevron-right"></i> Projects</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Contact With Social Media</h3>
+
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/balasuriya-p-5bb0b92a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://github.com/BALASURIYA-PERIYASAMY" class="social-icon" aria-label="GitHub"><i
+                  class="fa-brands fa-github"></i></a>
+              <a class="social-icon" href="https://www.instagram.com/itz_me_prince_bala?igsh=N2xpdHJuMzVjb3Ny"
+                aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="balasuriyaperiyasamy@gmail.com" class="social-icon" aria-label="Email"><i
+                  class="fa-solid fa-envelope"></i></a>
+              <a href="https://x.com/MibalaSuriya?t=yne2-qW8BqshTwZ9t8Y8lQ&s=09" class="social-icon"
+                aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a class="social-icon" href="https://balasuriya-coding-diary.blogspot.com/?m=1" aria-label="Blogger"><i
+                  class="fa-brands fa-blogger-b"></i></a>
+            </div>
+            <button class="scroll-top" aria-label="Scroll to Top">
+              <i class="fa-solid fa-arrow-up"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-credit">
+      <div class="container">
+        <p>@ Designed With <span class="heart">❤️</span> By <span class="designer">Balasuriya Periyasamy</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="assets/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+Place your certificate images here:
+
+- rtech-certificate.jpg (600x400px) - RTech Solution internship certificate
+- training-trains-certificate.jpg (600x400px) - Training Trains internship certificate
+
+These images will appear when hovering over the experience cards.
+Recommended formats: JPG or PNG
+Ensure certificates are clearly readable.

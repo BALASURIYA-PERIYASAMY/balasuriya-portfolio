@@ -1,0 +1,7 @@
+Place your profile images here:
+
+- profile.jpg (400x400px) - Main profile picture for About section
+- hero-bg.jpg (1600x900px) - Background image for Home section hero card
+
+Recommended formats: JPG or PNG
+Optimize images for web use to ensure fast loading.
